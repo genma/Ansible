@@ -1,0 +1,22 @@
+---
+- hosts: [virtualbox]
+  remote_user: root
+
+  tasks:
+  - name: update and upgrade apt packages        
+    apt:
+      update_cache=yes
+      state=latest
+      upgrade=yes
+
+
+- hosts: [cloudperso]
+  remote_user: genma
+  sudo: yes
+  tasks:
+  - name: update and upgrade apt packages        
+    apt:
+      update_cache=yes
+      state=latest
+      upgrade=yes
+

@@ -1,0 +1,11 @@
+---
+- hosts: [centos]
+  remote_user: root
+
+  tasks:
+  - name: update and upgrade apt packages        
+    yum:
+      name=*
+      state=latest
+
+

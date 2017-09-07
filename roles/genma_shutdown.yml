@@ -1,0 +1,9 @@
+---
+- hosts:  [virtualbox]
+  remote_user: root
+
+  tasks:
+    - name: shutdown
+      command: /sbin/shutdown -h now
+
+
